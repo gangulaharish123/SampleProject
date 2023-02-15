@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
-        if let _ = KeychainService.standard.get(key: "Password2") {
+        if let _ = KeychainService.standard.get(key: "Password1") {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let navigationController: UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
             let loginVC = storyboard.instantiateViewController(withIdentifier: "ShowPasswordViewController") as! ShowPasswordViewController
